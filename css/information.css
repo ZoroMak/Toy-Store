@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*Стилизация шапки*/
+.header{
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.header:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+  background-color: #7e619c;
+}
+
+.header_body{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.header_list{
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.header_list li{
+  list-style: none;
+  margin: 0px 0px 0px 20px;
+ }
+
+.header_list li a{
+    text-decoration: none;
+    opacity: 0.7;
+    transition: all .1s ease-in-out;
+    color: #ffffff;
+}
+
+.header_list li a:hover{
+    opacity: 1;
+}
+
+.header_list li .enter_button{
+    opacity: 0.7;
+    transition: all .1s ease-in-out;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    background-color: rgb(255, 140, 0);
+    height: 36px;
+    border-radius: 15%;
+}
+
+.header_list li .enter_button:hover{
+    opacity: 1;
+}
+
+.navbar-brand{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    z-index: 3;
+}
+
+.navbar-brand:hover{
+    color: #464196;
+    
+}
+
+/* Кнопка, используемая для открытия контактной формы */
+  
+  /* Всплывающая форма-скрыта по умолчанию */
+  .form-popup {
+    display: none;
+    position: fixed;
+    left: calc(50% - 280px/2);
+    top: 25%;
+    border: 3px solid #f1f1f1;
+    z-index: 5;
+    height: 50 vh;
+  }
+
+    .overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  /* Добавление стилей в контейнер форм */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Поля ввода полной ширины */
+  .form-container input[type=email], .form-container input[type=password] {
+    width: 80%;
+    padding: 13px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Когда входы получают фокус, сделайте что-нибудь */
+  .form-container input[type=email]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Установите стиль для кнопки отправить/кнопка */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+  }
+  
+  /* Добавьте красный цвет фона к кнопке отмена */
+  .form-container .cancel {
+    background-color: red;
+    border-radius: 10px;
+  }
+  
+  /* Добавьте некоторые эффекты наведения на кнопки */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  .form-popup p{
+    text-align: center;
+    font-size: small;
+  }
+
+  .form-popup .reg{
+    text-align: center;
+    font-size: large;
+    background-color: grey;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 16px;
+    color: rgb(72, 71, 71);
+    opacity: 0.7;
+  }
+
+  .form-popup .reg:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+  
+  .inform{
+    display: block;
+    margin-top: 10px;
+  }
+
+  input::placeholder{
+    color: #553c9a;
+    opacity: 0.7;
+  }
+
+  input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.5s ease;}
+  input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.5s ease;}
+  input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.5s ease;}
+  input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.5s ease;}
+
+  iframe{
+    margin: 10px;
+    width: 600px;
+    height: 450px;
+  }
+
+  /*Значок уведомления*/
+  /* Dropdown Button */
+.dropbtn {
+    background-color: rgb(196, 196, 196);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: fixed;
+    right: 2vw;
+    bottom: 3vh;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #b43ffd;
+  color: #ffffff;
+  border-radius: 10px;
+  transform: scale(1.2); 
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  
+}
+
+.dropdown:hover .dropdown-content h4{
+  align-items: center;
+  background-color: #b43ffd;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {visibility: hidden;}
+
+/*Стилизвция главной части страницы*/
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    color:#7e619c; 
+}
+main{
+  padding: 0 20%;
+}
+
+.ourAdvantage{
+    margin: 10% 0;
+}
+
+.Card{
+    margin: 5% 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+}
+
+.box{
+    position: relative;
+    width: 170px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    opacity: 0.7;
+}
+
+.box img{
+    filter: invert(100%);
+    position: relative;
+    color: #fff;
+    z-index: 10;
+}
+
+.box p{
+    text-align: center;
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    z-index: 10;
+}
+
+
+.box::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animate 4s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    inset: 0px;
+    background:  rgb(18, 7, 55);
+    border-radius: 16px;
+}
+
+.box:hover::after{
+    inset: 4px;
+}
+
+.ourAdvantage:hover .box:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.ourAdvantage:hover .box{
+    opacity: 0.5;
+}
+
+.aboutCompany p{
+    text-indent: 30px;
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+footer{
+  border-top: solid;
+  border-width: 5px;
+}
+
+.connect{
+  margin-right: 100px;
+}
+
+address{
+  display: flex;
+  justify-content: center;
+}
+
+/*Кнопки соцсетей в футуре*/
+
+.socialNetwork{
+  list-style: none;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0px;
+}
+
+.socialNetwork .openNetwork{
+  border-radius: 30px;
+  border-width: 1px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.socialNetwork .openNetwork::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #6a3093, #a044ff);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: all 0.8s ease;
+}
+
+.socialNetwork .openNetwork:hover::after{
+  transform: translateY(0);
+}
+
+.socialNetwork .openNetwork .PNG{
+  position: relative;
+  padding: 5px;
+  z-index: 2;
+}
+
+.socialNetwork .openNetwork:hover .PNG{
+    filter: invert();
+}
+
+@media only screen and (max-width: 1200px){
+  
+  .box{
+    width: 150px;
+    height: 160px;
+  }
+
+.box img{
+    width: 60px;
+    height: 60px;
+}
+
+.box p{
+  font-size: 12px;
+}
+
+.socialNetwork .openNetwork{
+  background: linear-gradient(to bottom, #6a3093, #a044ff);
+}
+
+.socialNetwork .openNetwork .PNG{
+  filter: invert();
+}
+
+  footer address{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-container {
+    max-width: 250px;
+    left: calc(50% - 200px/2);
+  }
+}
+
+@media only screen and (max-width: 1000px){
+
+  main{
+    padding: 0;
+  }
+  
+  .box{
+    width: 130px;
+    height: 150px;
+  }
+}
+  @media only screen and (max-width: 768px){
+
+    .lock{
+      overflow: hidden;
+    }
+
+    .header_burger{
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 3;
+      right: 10px;
+    }
+
+    .header_burger span{
+      position: absolute;
+      background-color: #ffffff;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+    }
+
+    .header_burger::before,
+    .header_burger::after{
+      content: '';
+      background-color: #ffffff;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+
+    .header_burger::before{
+      top: 0px;
+    }
+
+    .header_burger::after{
+      bottom: 0px;
+    }
+
+    .header_burger.active::before{
+      top: 9px;
+      transform: rotate(45deg);
+    }
+
+    .header_burger.active::after{
+      bottom:9px;
+      transform: rotate(-45deg);
+    }
+
+    .header_burger.active span{
+      visibility: hidden;
+    }
+    
+    .header_menu{
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: rgb(188, 77, 160);
+      padding-top: 50px;
+      transition: all 0.3s ease 0s;
+    }
+
+    .header_menu.active{
+      top: 0;
+    }
+
+    .header_list{
+      display: block;
+      left: 0;
+    }
+
+    .header_list li{
+      font-size: 16px;
+      list-style: none;
+      margin: 0px 0px 20px 0px;
+     }
+
+     .header_list li a{
+      opacity: 1;
+     }
+
+    .header{
+      position: fixed;
+    }
+    
+    .header:before{
+      position: fixed;
+      height: 40px;
+      z-index: 2;
+    }
+
+    .navbar-brand{
+      padding-bottom: 10px;
+      z-index: 3;
+  }
+
+  .header_body{
+    height: 40px;
+  }
+
+  main{
+    padding: 0;
+  }
+
+  .aboutCompany p{
+    font-size: 16px;
+  }
+
+
+  iframe{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 530px){
+
+  .Card{
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .connect{
+    margin-right: 0;
+  }
+  
+  .box{
+    width: 100px;
+    height: 130px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 490px){
+
+  .Catalog #First{
+    font-size: 20px;
+  }
+
+  .Products ul li{
+    height: 225px;
+  }
+
+  .Products ul li img{
+    width: 120px;
+    height: 120px;
+  }
+
+  .connect {
+    padding-right: 0px
+  }
+
+  .title{
+    padding-top: 10px;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+}

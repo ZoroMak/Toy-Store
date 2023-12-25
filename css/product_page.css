@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*Стилизация шапки*/
+.header{
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.header:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+  background-color: #7e619c;
+}
+
+.header_body{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.header_list{
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.header_list li{
+  list-style: none;
+  margin: 0px 0px 0px 20px;
+ }
+
+.header_list li a{
+    text-decoration: none;
+    opacity: 0.7;
+    transition: all .1s ease-in-out;
+    color: #ffffff;
+}
+
+.header_list li a:hover{
+    opacity: 1;
+}
+
+.header_list li .enter_button{
+    opacity: 0.7;
+    transition: all .1s ease-in-out;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    background-color: rgb(255, 140, 0);
+    height: 36px;
+    border-radius: 15%;
+}
+
+.header_list li .enter_button:hover{
+    opacity: 1;
+}
+
+.navbar-brand{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    z-index: 3;
+}
+
+.navbar-brand:hover{
+    color: #464196;
+    
+}
+
+/* Кнопка, используемая для открытия контактной формы */
+  
+  /* Всплывающая форма-скрыта по умолчанию */
+  .form-popup {
+    display: none;
+    position: fixed;
+    left: calc(50% - 280px/2);
+    top: 25%;
+    border: 3px solid #f1f1f1;
+    z-index: 5;
+    height: 50 vh;
+  }
+
+    .overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  /* Добавление стилей в контейнер форм */
+  .form-container {
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+  }
+  /* Поля ввода полной ширины */
+  .form-container input[type=email], .form-container input[type=password] {
+    width: 80%;
+    padding: 13px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Когда входы получают фокус, сделайте что-нибудь */
+  .form-container input[type=email]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Установите стиль для кнопки отправить/кнопка */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+  }
+  
+  /* Добавьте красный цвет фона к кнопке отмена */
+  .form-container .cancel {
+    background-color: red;
+    border-radius: 10px;
+  }
+  
+  /* Добавьте некоторые эффекты наведения на кнопки */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  .form-popup p{
+    text-align: center;
+    font-size: small;
+  }
+
+  .form-popup .reg{
+    text-align: center;
+    font-size: large;
+    background-color: grey;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 16px;
+    color: rgb(72, 71, 71);
+    opacity: 0.7;
+  }
+
+  .form-popup .reg:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: #553c9a;
+    opacity: 0.7;
+  }
+
+  input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.5s ease;}
+  input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.5s ease;}
+  input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.5s ease;}
+  input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.5s ease;}
+  input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.5s ease;}
+
+
+/*Стилизвция главной части страницы*/
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    color:#7e619c; 
+}
+main{
+  padding: 0 15%;
+}
+
+.InformProduct{
+   margin: 50px 0;
+   width: 100%;
+}
+
+.InformProduct .Producting{
+    width: 500px;
+    height: inherit;
+    margin-right: 20px;
+}
+
+.blockGame{
+    display: flex;
+}
+
+.blockGame .Inform {
+    text-indent: 1.25em;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.blockGame .Inform .Cost{
+    font-size: 40px;
+}
+
+.Inform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Cost{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Cost button{
+    background-color: #7e619c;
+    color:#ffffff;
+    font-size: 18px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.characteristic .oglavl{
+  padding-inline-start: 0px;
+}
+
+.characteristic .Type{
+  display: flex;
+  justify-content: space-between;
+  
+  position: relative;
+  padding: 0;
+  margin-bottom:5px;
+}
+
+.characteristic .Type p{
+  max-width: 50%;
+  bottom: -5px;
+}
+
+.characteristic .Type .align{
+  text-align: right;
+}
+
+/*Стилизация footer*/
+footer{
+    border-top: solid;
+    border-width: 5px;
+  }
+  
+  address{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .connect{
+    padding-right: 100px;
+  }
+  
+  .connect p{
+    padding-bottom: 20px;
+  }
+  
+  .connect p a{
+    text-decoration: none;
+    opacity: 0.7;
+    transition: all .1s ease-in-out;
+    color: #7e619c;
+  }
+
+  iframe{
+    width: 500px;
+    height: 500px;
+  }
+  /*Кнопки соцсетей в футуре*/
+
+.socialNetwork{
+  list-style: none;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0px;
+}
+
+.socialNetwork .openNetwork{
+  border-radius: 30px;
+  border-width: 1px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.socialNetwork .openNetwork::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #6a3093, #a044ff);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: all 0.8s ease;
+}
+
+.socialNetwork .openNetwork:hover::after{
+  transform: translateY(0);
+}
+
+.socialNetwork .openNetwork .PNG{
+  position: relative;
+  padding: 5px;
+  z-index: 2;
+}
+
+.socialNetwork .openNetwork:hover .PNG{
+  filter: invert();
+}
+
+@media only screen and (max-width: 1350px){
+  .blockGame{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blockGame .img img{
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  
+  footer address{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-container {
+    max-width: 250px;
+    left: calc(50% - 200px/2);
+  }
+
+  .socialNetwork .openNetwork{
+    background: linear-gradient(to bottom, #6a3093, #a044ff);
+  }
+  
+  .socialNetwork .openNetwork .PNG{
+    filter: invert();
+  }
+}
+
+  @media only screen and (max-width: 768px){
+
+    .lock{
+      overflow: hidden;
+    }
+
+    .header_burger{
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 3;
+      right: 10px;
+    }
+
+    .header_burger span{
+      position: absolute;
+      background-color: #ffffff;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+    }
+
+    .header_burger::before,
+    .header_burger::after{
+      content: '';
+      background-color: #ffffff;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+
+    .header_burger::before{
+      top: 0px;
+    }
+
+    .header_burger::after{
+      bottom: 0px;
+    }
+
+    .header_burger.active::before{
+      top: 9px;
+      transform: rotate(45deg);
+    }
+
+    .header_burger.active::after{
+      bottom:9px;
+      transform: rotate(-45deg);
+    }
+
+    .header_burger.active span{
+      visibility: hidden;
+    }
+    
+    .header_menu{
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-color: rgb(188, 77, 160);
+      padding-top: 50px;
+      transition: all 0.3s ease 0s;
+    }
+
+    .header_menu.active{
+      top: 0;
+    }
+
+    .header_list{
+      display: block;
+      left: 0;
+    }
+
+    .header_list li{
+      font-size: 16px;
+      list-style: none;
+      margin: 0px 0px 20px 0px;
+     }
+
+     .header_list li a{
+      opacity: 1;
+     }
+
+    .header{
+      position: fixed;
+    }
+    
+    .header:before{
+      position: fixed;
+      height: 40px;
+      z-index: 2;
+    }
+
+    .navbar-brand{
+      padding-bottom: 10px;
+      z-index: 3;
+  }
+
+  .header_body{
+    height: 40px;
+  }
+
+  main{
+    padding: 5%;
+  }
+
+  .Cost .Price{
+    font-size: 30px;
+  }
+
+  iframe{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 620px){
+  .blockGame .img img{
+    width: 250px;
+    height: auto;
+  }
+
+  .connect {
+    padding-right: 0px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
+  .Cost .Price{
+    font-size: 20px;
+  }
+
+  .Cost{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: 0 -3px 5px;
+  }
+
+  .Cost button{
+    margin-right: 10px;
+  }
+
+  button img{
+    width: 20px;
+    height: auto;
+  }
+  button span{
+    font-size: 12px;
+  }
+
+  footer{
+    overflow: hidden;
+  }
+
+  iframe{
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+}

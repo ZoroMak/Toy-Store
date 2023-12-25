@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кубик в кубе</title>
+    <link rel = "icon" type = "images/x-icon" href = "img/icon.ico">
+    <link rel = "stylesheet" href = "css/information.css">
+</head>
+
+<body>
+    <header class="header">
+            <div class="container">
+                <div class="header_body">
+                    <a href="index.html" class="navbar-brand">Кубик в кубе<img src="img/icon.ico" alt="Плюшевые игрушки"></a>
+                    <div class="header_burger">
+                        <span></span> 
+                    </div>
+                     <nav class="header_menu">
+                        <ul class="header_list">
+                            <li><a href="#First">Каталог</a></li>
+                            <li><a href="information.html">О нас</a></li>
+                            <li><a href="basket.html">Корзина</a></li>
+                            <li><a href="tel:89867961173">8 986 004 04 04</a></li>
+                            <li><button class="enter_button" onclick="openForm()">Войти</button>
+                                <div class="form-popup" id="myForm">
+                                    <form action="../action_page.php" class="form-container">
+                                        <h1>Вход</h1>
+                        
+                                        <label for="email"><b>Почта</b></label>
+                                        <input type="email" placeholder="Ваша почта" name="email" required checked>
+                        
+                                        <label for="psw"><b>Пароль</b></label>
+                                        <input type="password" placeholder="Ваш пароль" name="psw" required>
+                        
+                                        <button type="submit" class="btn">Вход</button>
+                                        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                                        
+                                        <p>Нет профиля на нашем сайте</p>
+                                        <p class="reg"><a href="regist.html"
+                                            target = "_blank">Зарегистрироваться</a></p>
+                                    </form>
+                                    <div class="overlay"></div>
+                                        </div>
+                            
+                                        <script>
+                                        function openForm() {
+                                        document.getElementById("myForm").style.display = "block";
+                                        }
+                            
+                                        function closeForm() {
+                                        document.getElementById("myForm").style.display = "none";
+                                        }
+                                        </script>
+                           </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="ourAdvantage">
+            <h1 class="title">Чем мы лучше конкурентов?</h1>
+            <div class="Card">
+                <div class="box">
+                    <img src="img/toy_brick.png">
+                    <p>Широкий ассортимент</p>
+                </div>
+                <div class="box">
+                    <img src="img/toy_brick_minus.png">
+                    <p>Доступные цены</p>
+                </div>
+                <div class="box">
+                    <img src="img/delivery.png">
+                    <p>Доставка в любое место</p>
+                </div>
+                <div class="box">
+                    <img src="img/worker.png">
+                    <p>Компетентный персонал</p>
+                </div>
+                <div class="box">
+                    <img src="img/family.png">
+                    <p>Ориентация на клиентов</p>
+                </div>
+                <div class="box">
+                    <img src="img/box.png">
+                    <p>Упаковка подарков</p>
+                </div>
+            </div>
+        </section>
+        <section class="aboutCompany">
+            <h1>Кубик в кубе </h1>
+            <p>
+                Добро пожаловать в "Кубик в кубе" - ваш уникальный магазин игрушек! 
+                У нас вы найдете широкий ассортимент разнообразных игрушек для детей 
+                всех возрастов. Наша задача - вдохновить детское воображение и создать 
+                незабываемые моменты радости.<p>
+                В нашем магазине представлены игрушки самых популярных брендов, от 
+                классических до инновационных. Мы гордимся тем, что каждая игрушка проходит 
+                строгий отбор, чтобы гарантировать высокое качество и безопасность для детей.<p>
+                У нас вы найдете разнообразные конструкторы, головоломки, настольные игры, 
+                плюшевых мишек и многое другое. Мы также предлагаем экологически чистые игрушки, 
+                чтобы помочь детям познакомиться с окружающей средой и стать ответственными гражданами 
+                нашей планеты.<p>
+                Наши дружелюбные и компетентные сотрудники всегда готовы помочь вам с выбором и 
+                ответить на все ваши вопросы. Магазин "Кубик в кубе" - это место, где детишки могут 
+                находить радость, учиться и расти в игровой среде, полной волшебства и вдохновения. 
+                Приходите и откройте мир радости и игры вместе с нами!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            <div class="connect">
+                <h3>Связь с нами</h3>
+                <p><a href="mailto:zorov.ma@mail.ru">Наша почта: cube_cube@mail.ru</a></p>
+                <p><a href="tel:+79867961173">Телефона:+7-986-004-04-04</a></p>
+
+                <h3>Наши соцсети</h3>
+                <ul class="socialNetwork">
+                    <li><button class="openNetwork"><img src="img/vk.png" class="PNG"></button></li>
+                    <li><button class="openNetwork"><img src="img/telegram.png" class="PNG"></button></li>
+                    <li><button class="openNetwork"><img src="img/YOUTUBE.png" class="PNG"></button></li>
+                </ul>
+
+            </div>
+
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36012.489472513786!2d37.50065467674408!3d55.658025023837034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54dc1d23b51c3%3A0x74763ed59c81ccb6!2z0KDQotCjINCc0JjQoNCt0JA!5e0!3m2!1sru!2sru!4v1695895615462!5m2!1sru!2sru" 
+                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </address>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

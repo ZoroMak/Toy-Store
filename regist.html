@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" type = "images/x-icon" href = "img/icon.ico">
+    <link rel = "stylesheet" href = "css/regist.css">
+</head>
+
+<body>
+    <main>
+        <div class="circle"></div>
+        <div class="refister-form-container">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;"></div>
+
+            <h1 class="form-title">Регистрация</h1>
+            <div class="form-fields">
+                <form>
+
+                <label for="name" class="inform"></label>
+                <input type="text" placeholder="Имя" name="name" required pattern="[A-Za-zА-Яа-яЁё]+">
+
+                <label for="surname" class="inform"></label>
+                <input type="text" placeholder="Фамилия" name="surname" required pattern="[A-Za-zА-Яа-яЁё]+">
+
+                <label for="mail" class="inform"></label>
+                <input type="email" placeholder="Электронная почта" name="mail" required>
+
+                <label for="password" class="inform"></label>
+                <input type="password" placeholder="Пароль" name="password" required>
+
+                <label for="password" class="inform"></label>
+                <input type="password" placeholder="Повторите пароль" name="repeate_password" required>
+
+                <label for="date" class="inform">Дата рождения</label>
+                <input type="datetime-local" placeholder="Дата рождения" name="date" required min="1900-01-01T00:00" max="2050-12-31T00:00">
+            
+                <button type="submit" class="button">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кубик в кубе</title>
+    <link rel = "icon" type = "images/x-icon" href = "img/icon.ico">
+    <link rel = "stylesheet" href = "css/basket.css">
+</head>
+
+<body>
+    <header class="header">
+            <div class="container">
+                <div class="header_body">
+                    <a href="index.html" class="navbar-brand">Кубик в кубе<img src="img/icon.ico"></a>
+                    <div class="header_burger">
+                        <span></span> 
+                    </div>
+                     <nav class="header_menu">
+                        <ul class="header_list">
+                            <li><a href="#First">Каталог</a></li>
+                            <li><a href="information.html">О нас</a></li>
+                            <li><a href="basket.html">Корзина</a></li>
+                            <li><a href="tel:89860040404">8 986 004 04 04</a></li>
+                            <li><button class="enter_button" onclick="openForm()">Войти</button>
+                                <div class="form-popup" id="myForm">
+                                    <form action="../action_page.php" class="form-container">
+                                        <h1>Вход</h1>
+                        
+                                        <label for="email"><b>Почта</b></label>
+                                        <input type="email" placeholder="Ваша почта" name="email" required checked>
+                        
+                                        <label for="psw"><b>Пароль</b></label>
+                                        <input type="password" placeholder="Ваш пароль" name="psw" required>
+                        
+                                        <button type="submit" class="btn">Вход</button>
+                                        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                                        
+                                        <p>Нет профиля на нашем сайте</p>
+                                        <p class="reg"><a href="regist.html"
+                                            target = "_blank">Зарегистрироваться</a></p>
+                                    </form>
+                                        
+                                    <div class="overlay"></div>
+
+                            
+                                        <script>
+                                        function openForm() {
+                                        document.getElementById("myForm").style.display = "block";
+                                        }
+                            
+                                        function closeForm() {
+                                        document.getElementById("myForm").style.display = "none";
+                                        }
+                                        </script>
+                           </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="title">Моя корзина</h1>
+        <section class="bags">
+            <div class="center">
+                <ul class="List"></ul>
+
+                <div class="Delivery">
+                    <h1>Укажите контактные данные</h1>
+                    <form>
+                        <label for="name" class="inform">Имя<span>(обязательно)</span></label>
+                        <input type="text" placeholder="Имя" name="name" required pattern="[A-Za-zА-Яа-яЁё]+">
+            
+                        <label for="surname" class="inform">Фамилия</label>
+                        <input type="text" placeholder="Фамилия" name="surname" required pattern="[A-Za-zА-Яа-яЁё]+">
+                        
+                        <div class="link">
+                            <label for="tel">Телевон<span>(обязательно)</span></label>
+                            <input type="tel" placeholder="+7 (***) ***-**-**" name="tel" required>
+            
+                            <label for="mail" class="inform">Электронная почта<span>(обязательно)</span></label>
+                            <input type="email" placeholder="Электронная почта" name="mail" required>
+                        </div>
+                
+                    </form>
+        
+                    <h1>Укажите адрес доставки</h1>
+        
+                    <form>
+                        <div class="home">
+                            <label for="address" class="inform">Адрес доставки<span>(обязательно)</span>
+                            <input type="text" placeholder="Улица, дом" name="address" required pattern="[A-Za-zА-Яа-яЁё0-9]+">
+                            </label>
+                
+                            <label for="address1" class="inform">Квартира/офис
+                            <input type="text" name="address" required>
+                            </label>
+                        </div>
+        
+                        <label for="story">Комментарии(если есть, что передать курьеру)</label>
+                        <textarea id="story" name="story" rows="5" cols="33"></textarea>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Form">
+                <form>
+                    <label for="text"></label>
+                    <input type="text" placeholder="Промокод" class="text" required checked>
+
+                    <div class="Total">
+                        <p>ИТОГО:</p>
+                        <p class="price">0</p>
+                    </div>
+
+                    <button type="button" class="button">Оформить заказ</button>
+
+                    <div class="checkbox1">
+                        <input type="checkbox" id="myCheckbox" class="checkbox">
+                        <label for="myCheckbox" class="checkbox">
+                            SMS-оповещение Вы получите уведомление о статусе заказа
+                        </label>
+                    </div>
+
+                    <div class="checkbox1">
+                        <input type="checkbox" id="myCheckbox1" class="checkbox">
+                        <label for="myCheckbox1" class="checkbox">
+                            Нажимая кнопку "Оформить заказ", я соглашаюсь с условиями договора купли-продажи, 
+                            соглашаюсь на обработку персональных данных в соответствии с Положением об обработке 
+                            персональных данных и Правилами обработки персональных данных, а также даю согласие 
+                            на получение информации о специальных предложениях, о новых товарах и рекламных 
+                            акциях включая, но не ограничиваясь e-mail-рассылками, телефонией, 
+                            сетью Интернет и мобильными устройствами.
+                        </label>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/addbags.js"></script>
+    <script src="js/script.js"></script>
+</body>
